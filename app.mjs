@@ -45,7 +45,7 @@ function printDOMTreeSteps(node, prefix = "", isLast = true) {
   });
 
   const children = Array.from(node.children);
-  const newPrefix = prefix + (isLast ? " " : " │");
+  const newPrefix = prefix + (isLast ? " " : "│");
 
   for (let i = 0; i < children.length; i++) {
     printDOMTreeSteps(children[i], newPrefix, i === children.length - 1);
