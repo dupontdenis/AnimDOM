@@ -1,0 +1,84 @@
+body {
+  font-family: monospace;
+  background: #0f172a;
+  color: #e2e8f0;
+  padding: 20px;
+}
+
+/* 🔥 GRID GLOBAL */
+.container {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  gap: 20px;
+  height: 500px;
+}
+
+/* 🔝 HAUT : bouton + HTML */
+.top {
+  display: grid;
+  grid-template-rows: auto auto;
+  gap: 10px;
+}
+
+/* 🔽 BAS : logs + pile */
+.bottom {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+  height: 100%;
+}
+
+/* 🔹 BLOCS PANEL */
+.panel {
+  background: #020617;
+  padding: 12px;
+  border-radius: 8px;
+
+  display: grid;
+  grid-template-rows: auto 1fr;
+}
+
+/* 🔹 LOGS (inverse) */
+#log {
+  overflow-y: auto;
+  display: grid;
+  grid-auto-rows: min-content;
+}
+
+/* chaque ligne de log reste lisible */
+#log div {
+  margin: 2px 0;
+}
+
+/* 🔹 STACK */
+#stack {
+  list-style: none;
+  padding: 0;
+  overflow-y: auto;
+  display: grid;
+  grid-auto-rows: min-content;
+}
+
+/* élément actif */
+li.active {
+  color: #22c55e;
+}
+
+/* LOG COLORS */
+.enter {
+  color: #38bdf8;
+}
+
+.exit {
+  color: #f87171;
+}
+
+/* BOUTON */
+button {
+  width: fit-content;
+  padding: 8px 12px;
+  background: #38bdf8;
+  border: none;
+  cursor: pointer;
+  border-radius: 6px;
+}

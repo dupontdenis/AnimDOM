@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM Tree Animator</title>
+  <link rel="stylesheet" href="style.css">
+  <script type="module" src="app.mjs"></script>
+</head>
+
+<body>
+
+  <h1>Animation DOM Tree</h1>
+
+
+  <div class="container">
+
+    <!-- 🔝 HAUT -->
+    <div class="top">
+      <button id="startBtn">Lancer</button>
+
+      <div id="demo">
+        <p class="premier">Para 1</p>
+        <p><em>second </em> Para 2</p>
+        <p id="dernier"> dernier Para</p>
+        <!-- je suis un commentaire -->
+      </div>
+    </div>
+
+    <!-- 🔽 BAS -->
+    <div class="bottom">
+
+      <div class="panel">
+        <h2>Logs</h2>
+        <pre id="log"></pre>
+      </div>
+
+      <div class="panel">
+        <h2>Pile</h2>
+        <ul id="stack"></ul>
+      </div>
+
+    </div>
+
+  </div>
+
+
+</body>
+
+</html>
