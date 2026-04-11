@@ -1,4 +1,5 @@
 const logEl = document.getElementById("log");
+const treeEl = document.getElementById("tree");
 const stackEl = document.getElementById("stack");
 const btn = document.getElementById("startBtn");
 
@@ -28,6 +29,12 @@ function log(text, type = "") {
   logEl.appendChild(line);
   logEl.scrollTop = logEl.scrollHeight;
 }
+
+function logTree(text) {
+  treeEl.textContent += text + "\n";
+  treeEl.scrollTop = treeEl.scrollHeight;
+}
+
 function addStep(action) {
   steps.push(action);
 }
@@ -41,7 +48,11 @@ function printDOMTreeSteps(node, prefix = "", isLast = true) {
     stack.push(label);
     renderStack();
     log(`▶ Entrée: ${label}`, "enter");
-    log(prefix + connector + label);
+  });
+
+  // Tree (separator only)
+  addStep(() => {
+    logTree(prefix + connector + label);
   });
 
   const children = Array.from(node.children);
@@ -76,6 +87,7 @@ async function playAll() {
 
 btn.addEventListener("click", () => {
   logEl.innerHTML = "";
+  treeEl.innerHTML = "";
   stack = [];
   renderStack();
 
@@ -92,6 +104,7 @@ document.getElementById("stepBtn").addEventListener("click", () => {
   if (steps.length === 0) {
     // première initialisation
     logEl.innerHTML = "";
+    treeEl.innerHTML = "";
     stack = [];
     renderStack();
 

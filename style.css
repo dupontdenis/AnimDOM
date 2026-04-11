@@ -20,10 +20,10 @@ body {
   gap: 10px;
 }
 
-/* 🔽 BAS : logs + pile */
+/* 🔽 BAS : tree + logs + pile */
 .bottom {
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 20px;
   height: 100%;
 }
