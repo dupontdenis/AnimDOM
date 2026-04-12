@@ -21,7 +21,7 @@ export function resetSteps() {
 }
 
 export function printDOMTreeSteps(node, prefix = "", isLast = true) {
-  const connector = isLast ? "└── " : "├── ";
+  const connector = isLast ? " └── " : " ├── ";
   const label = node.nodeName;
 
   // Entrée
@@ -37,7 +37,7 @@ export function printDOMTreeSteps(node, prefix = "", isLast = true) {
   });
 
   const children = Array.from(node.children);
-  const newPrefix = prefix + (isLast ? " " : "│");
+  const newPrefix = prefix + (isLast ? "  " : " │");
 
   for (let i = 0; i < children.length; i++) {
     printDOMTreeSteps(children[i], newPrefix, i === children.length - 1);
