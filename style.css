@@ -10,7 +10,6 @@ body {
   display: grid;
   grid-template-rows: auto 1fr;
   gap: 20px;
-  height: 500px;
 }
 
 /* 🔝 HAUT : bouton + HTML */
@@ -23,7 +22,7 @@ body {
 /* 🔽 BAS : tree + logs + pile */
 .bottom {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
   gap: 20px;
   height: 100%;
 }
